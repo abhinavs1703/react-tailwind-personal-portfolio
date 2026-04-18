@@ -69,14 +69,14 @@ export const Hero = () => {
             <div className="animate-fade-in">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                Software Development Engineer
+                Data/Business Analyst
               </span>
             </div>
 
             {/* Headline */}
             <div className="space-y-4">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-                Turning data<span className="text-primary glow-text">into decisions,</span>
+                Turning data <span className="text-primary glow-text">into decisions,</span>
                 <br />
                 and problems into
                 <br />
