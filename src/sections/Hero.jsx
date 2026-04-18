@@ -76,18 +76,19 @@ export const Hero = () => {
             {/* Headline */}
             <div className="space-y-4">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-                Crafting <span className="text-primary glow-text">scalable</span>
+                Turning data<span className="text-primary glow-text">into decisions,</span>
                 <br />
-                software with
+                and problems into
                 <br />
                 <span className="font-serif italic font-normal text-white">
-                  precision.
+                  prodcuts.
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                Hi, I'm Abhinav Srivastava — a software engineer focused on building 
-                scalable, high-performance systems using C++, Python, and modern backend technologies. 
-                I enjoy designing reliable software solutions that combine strong system fundamentals with real-world impact.
+                Hi, I'm Abhinav Srivastava — a Data/Business analyst and product thinker focused on building
+                business intelligence solutions, defining product metrics, and translating complex data into descriptions that matter.
+                I combine strong analytical foundations with real world engineering experience across
+                SQL, Python, Power BI, Tableau, AWS and modern technologies.
               </p>
             </div>
 

@@ -40,45 +40,42 @@ export const About = () => {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
-              Building the systems of tomorrow,
+              Where analytical rigour meets product thinking -
               <span className="font-serif italic font-normal text-white">
                 {" "}
-                one component at a time.
+                building clarity from complexity.
               </span>
             </h2>
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
               <p>
-                I'm a software engineer in the making with a strong interest in building scalable,
-                performance-driven systems.I enjoy working close to the core of Software-where
-                concurrency, data flow, and system behaviour matter-turning complex requirements
-                into clean, reliable solutions that perform under real-world constraints.
+                I'm a final-year B.Tech graduate (VIT Vellore, May 2026) working at the intersection of data analytics,
+                business analysis, and product thinking. I don't just analyse data — I build the frameworks, pipelines,
+                and dashboards that make it actionable.
               </p>
               <p>
-                My work focuses on backend and system-level development using C++ and Python,
-                with hands-on experience in multithreading, RESTful API design, Linux environments,
-                and distributed workflows. I've built real-time event monitoring and alerting systems, 
-                multi-threaded file search and indexing tools, and intelligent automation pipelines,
-                emphasizing low latency, efficient resource usage, and fault-tolerant design.
-                I'm particularly interested in how well-architected systems scale, handle failures,
-                and remain maintainable over time.
+                At Tata Cummins, I analysed 10K+ IIoT telemetry records to monitor equipment KPIs and detect operational anomalies
+                in real time. At Indika AI, I engineered ETL pipelines across 50K+ unstructured records, improving data quality by ~30% 
+                through rule-based classification logic. On the product side, I've defined success metrics, designed A/B testing frameworks,
+                and built full BRDs and Figma prototypes — including a fare transparency feature concept for Uber, modelled across 5 fare components
+                with a complete experiment design.
               </p>
               <p>
-                Beyond projects, I continuously strengthen my foundations through problem solving,
-                open-source contributions, and deepening my understanding of core computer science 
-                concepts such as data structures, operating systems, networking, and system design. 
-                When I'm not coding, I enjoy exploring how software systems behave at scale and 
-                refining my approach to writing clear, purposeful code. I'm actively seeking entry-level
-                Software Development Engineer roles where strong fundamentals, ownership, and 
-                engineering rigor are valued.
+                Beyond analytics, I've deployed ML pipelines on AWS SageMaker, contributed to open-source projects, and continuously
+                deepen my foundations in data systems, statistical reasoning, and scalable pipeline design. I was awarded a Rs25L research grant
+                from VIT and won Innovation Week 2025 — both reflecting a bias toward solving real, non-trivial problems.
+              </p>
+              <p>
+                Currently seeking Product Analyst, Data Analyst, and Business Analyst roles in Delhi NCR where structured thinking,
+                analytical rigour, and cross-functional ownership are valued. Would love to hear back for such opportunities.
               </p>
             </div>
 
             <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
               <p className="text-lg font-medium italic text-foreground">
-                "My mission is to build scalable, reliable software systems that 
-                perform under real-world constraints — solutions that are efficient,
-                maintainable, and engineered with clarity, precision, and purpose."
+                "My mission is to transform raw, complex data into structured intelligence — building 
+                analytical systems, product frameworks, and business solutions that are rigorous, 
+                impactful, and engineered with clarity and purpose."
               </p>
             </div>
           </div>
