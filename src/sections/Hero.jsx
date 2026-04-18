@@ -76,9 +76,9 @@ export const Hero = () => {
             {/* Headline */}
             <div className="space-y-4">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-                Turning data<span className="text-primary glow-text"> into decisions,</span>
+                Turning data<span className="text-primary glow-text"> into decisions, and</span>
                 <br />
-                and problems into
+                problems into
                 <br />
                 <span className="font-serif italic font-normal text-white">
                   prodcuts.
