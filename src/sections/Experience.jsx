@@ -4,17 +4,17 @@ const experiences = [
     role: "Data Analyst Intern",
     company: "Indika AI",
     description:
-      "Transformed high-volume unstructured news data into analytics-ready insights by building rule-based event classification, improving data relevance and labeling accuracy by 30%+.",
-    technologies: ["SQL", "Python", "Data Analysis", "Data Cleaning", "Text Classification", "Analytical Skills", "Critical Thinking", "Problem Solving"],
+      "Engineered Python-based ETL pipelines across 50K+ unstructured records, applying rule-based classification and EDA to improve downstream data quality by ~30% — delivering structured, reporting-ready datasets that directly informed business decision-making.",
+    technologies: ["Python", "Pandas", "SQL", "EDA", "ETL Pipelines", "Data Cleaning", "Data Classification", "Analytical Thinking"],
     current: true,
   },
   {
     period: "Jan 2025 — Feb 2025",
     role: "Engineering Intern",
-    company: "Cummins Inc.",
+    company: "Tata Cummins Ltd.",
     description:
-      "Implemented fault-tolerant Python automation and IIoT telemetry pipelines, integrating PLC & SCADA systems to improve system stability and real-time monitoring efficiency by 25%+.",
-    technologies: ["Python", "Industrial Internet of Things (IIoT)", "SCADA", "Programmable Logic Controllers (PLC)", "Automation", "Telemetry", "Problem Solving"],
+      "Analysed 10K+ IIoT telemetry and time-series records using Python and SQL to monitor operational KPIs, detect real-time performance anomalies, and deliver structured engineering reports that supported data-driven maintenance and reliability decisions.",
+    technologies: ["Python", "SQL", "IIoT", "Time-Series Analysis", "KPI Monitoring", "Anomaly Detection", "Power BI", "ETL"],
     current: false,
   },
 ];
@@ -52,8 +52,8 @@ export const Experience = () => {
             className="text-muted-foreground
            animate-fade-in animation-delay-200"
           >
-            A timeline of my professional growth, from curious beginner to
-            senior engineer leading teams and building products at scale.
+            A timeline of real-world impact — from data pipelines and KPI systems
+            to business intelligence and operational analytics across organisations.
           </p>
         </div>
 

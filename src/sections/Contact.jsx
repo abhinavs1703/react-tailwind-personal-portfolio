@@ -242,9 +242,9 @@ export const Contact = () => {
                 <span className="font-medium">Currently Available</span>
               </div>
               <p className="text-muted-foreground text-sm">
-                I'm currently open to new opportunities and exciting projects.
-                Whether you need a full-time engineer or a freelance consultant,
-                let's talk!
+                I'm currently open to full-time opportunities in Data Analytics, Business Analysis,
+                and Product Analytics. Whether you're hiring, collaborating, or just want to
+                connect — let's talk!
               </p>
             </div>
           </div>

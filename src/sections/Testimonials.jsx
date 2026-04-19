@@ -4,27 +4,27 @@ import { useState } from "react";
 const testimonials = [
   {
     quote:
-      "Abhinav is one of the most talented engineers I've worked with. His attention to detail and ability to translate complex requirements into elegant solutions is remarkable.",
-    author: "Manvi Gupta",
-    role: "Engineering Team, Tata Cummins Inc.",
+      "Abhinav has a rare ability to bridge the gap between raw data and business decisions. During his time with us, he independently structured complex operational datasets and delivered reporting frameworks that our engineering team continues to use. His analytical thinking and documentation discipline are well beyond what you'd expect from an intern.",
+    author: "Manvi Bali Mishra",
+    role: "Engineering Team, Tata Cummins Ltd.",
     avatar:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
+      "/Manvi.jpeg",
   },
   {
     quote:
-      "Working with Abhinav was a game-changer for our project. He delivered ahead of schedule with code quality that set a new standard for our team.",
-    author: "Michael Lee",
+      "Abhinav brought genuine product thinking to a data role — he didn't just process and clean data, he asked why it mattered and shaped his outputs around business impact. His ETL pipelines were clean, well-documented, and immediately production-ready. A standout contributor who made the team's reporting measurably better.",
+    author: "Prakruth Shetty",
     role: "Product Manager, Indika AI",
     avatar:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop",
+      "/Prakruth.jpeg",
   },
   {
     quote:
-      "Not only is Abhinav technically brilliant, but he's also a fantastic communicator and team player. He elevated everyone around him.",
-    author: "Gaurav Sharma",
-    role: "Development Lead, Indika AI",
+      "What sets Abhinav apart is his ability to communicate data insights to non-technical stakeholders without losing precision. He structured his analysis clearly, asked the right questions upfront, and delivered dashboards and reports that drove actual decisions. He's the kind of analyst every cross-functional team wants.",
+    author: "Shivani Sharma",
+    role: "Data Team Lead, Indika AI",
     avatar:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
+      "/Shivani.jpeg",
   },
 ];
 
