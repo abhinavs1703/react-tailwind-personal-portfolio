@@ -2,56 +2,65 @@ import { ArrowUpRight, Github } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 const projects = [
   {
-    title: "Event Monitoring & Alerting System",
+    title: "Uber Live Fare Transparency — Product Analytics",
     description:
-      "A scalable real-time event monitoring and alerting platform enabling low-latency ingestion, intelligent alerts, and historical analysis.",
+      "A product analytics simulation defining 6 success metrics, A/B testing framework, and high-fidelity Figma prototype validating real-time fare transparency across 5 user journey states.",
     image: "/projects/project1.png",
-    tags: ["C++", "Python", "Rest APIs", "Multithreading", "Linux", "Git"],
+    tags: ["Product Analytics", "A/B Testing", "Figma", "SQL", "Python", "After Effects"],
     link: "https://github.com/abhinavs1703",
     github: "https://github.com/abhinavs1703",
   },
   {
-    title: "Multi-Threaded File Search & Indexing Tool",
+    title: "Operational KPI Monitoring & Anomaly Detection",
     description:
-      "A high-performance, multi-threaded file indexing and search engine delivering rapid keyword retrieval across large-scale directory systems through optimized memory and concurrency design.",
+      "An end-to-end operational analytics pipeline processing 10K+ time-series records daily, detecting performance anomalies using Z-score and IQR methods with interactive Power BI drill-down dashboards.",
     image: "/projects/project2.png",
-    tags: ["C++", "STL", "Multithreading", "File I/O", "Linux", "Git"],
-    link: "https://github.com/abhinavs1703",
-    github: "https://github.com/abhinavs1703",
-  },
-  {
-    title: "Intelligent Web Scraper & Automation System",
-    description:
-      "An intelligent automation platform that scrapes, cleans, and structures data from multiple web sources with configurable scheduling, rule-based workflows, and scalable data pipelines.",
-    image: "/projects/project3.png",
-    tags: ["Python", "NLP", "API Integration", "Machine Learning", "IOT"],
-    link: "https://github.com/abhinavs1703",
-    github: "https://github.com/abhinavs1703",
-  },
-  {
-    title: "Data driven Crop Recommendation System",
-    description:
-      "A data-driven crop intelligence system that leverages machine learning and cloud APIs to deliver accurate, real-time crop recommendations.",
-    image: "/projects/project4.png",
-    tags: ["Python", "Machine Learning", "Random Forest", "LightGBM", "AWS Sagemaker", "EC2", "S3"],
+    tags: ["Python", "SQL", "Power BI", "Pandas", "NumPy", "DAX"],
     link: "https://github.com/abhinavs1703",
     github: "https://github.com/abhinavs1703",
   },
   {
     title: "Automotive Car Sales Analytics Dashboard",
     description:
-      "An interactive sales analytics dashboard that automates multi-source data processing and delivers KPI-driven insights through dynamic, drill-down visualizations.",
-    image: "/projects/project5.png",
-    tags: ["Power BI", "Excel", "Power Query", "DAX"],
+      "An interactive business intelligence solution analysing 50K+ sales records across 12 regional markets, automating KPI reporting workflows and reducing manual effort by 40% through dynamic DAX measures.",
+    image: "/projects/project3.png",
+    tags: ["Power BI", "SQL", "Excel", "Power Query", "DAX"],
     link: "https://github.com/abhinavs1703",
     github: "https://github.com/abhinavs1703",
   },
   {
-    title: "Operational KPI monitoring & Anomaly Analysis",
+    title: "Data-Driven Crop Recommendation System",
     description:
-      "An operational analytics system that monitors KPIs at scale and detects performance anomalies using statistical analysis and interactive dashboards.",
+      "A cloud-deployed ML intelligence system benchmarking 4 classification models to 85%+ accuracy, with SHAP-based feature analysis and a scalable AWS SageMaker inference pipeline for real-time recommendations.",
+    image: "/projects/project4.png",
+    tags: ["Python", "Machine Learning", "LightGBM", "Random Forest", "AWS SageMaker", "EC2", "S3"],
+    link: "https://github.com/abhinavs1703",
+    github: "https://github.com/abhinavs1703",
+  },
+  {
+    title: "Event Monitoring & Alerting System",
+    description:
+      "A scalable real-time event monitoring and alerting platform enabling low-latency ingestion, threshold-based intelligent alerts, and historical performance analysis across distributed data streams.",
+    image: "/projects/project5.png",
+    tags: ["C++", "Python", "REST APIs", "Multithreading", "Linux", "Git"],
+    link: "https://github.com/abhinavs1703",
+    github: "https://github.com/abhinavs1703",
+  },
+  {
+    title: "Intelligent Web Scraper & Automation Pipeline",
+    description:
+      "An intelligent automation platform scraping, cleaning, and structuring multi-source data with configurable scheduling, rule-based classification workflows, and scalable downstream data pipelines.",
     image: "/projects/project6.png",
-    tags: ["Python", "SQL", "Power BI", "Pandas", "NumPy"],
+    tags: ["Python", "NLP", "API Integration", "Machine Learning", "Automation"],
+    link: "https://github.com/abhinavs1703",
+    github: "https://github.com/abhinavs1703",
+  },
+  {
+    title: "Multi-Threaded File Search & Indexing Tool",
+    description:
+      "A high-performance file indexing and search engine delivering rapid keyword retrieval across large-scale directory systems through optimised concurrency design and efficient memory management.",
+    image: "/projects/project7.png",
+    tags: ["C++", "STL", "Multithreading", "File I/O", "Linux", "Git"],
     link: "https://github.com/abhinavs1703",
     github: "https://github.com/abhinavs1703",
   },
@@ -77,9 +86,10 @@ export const Projects = () => {
             </span>
           </h2>
           <p className="text-muted-foreground animate-fade-in animation-delay-200">
-            A selection of my recent work, featuring scalable backend
-            systems, multithreaded applications and software solutions
-            built to handle real-world data and performance challenges.
+            A selection of my recent work — spanning data analytics pipelines,
+            business intelligence dashboards, product analytics simulations,
+            and machine learning deployments — built to solve real operational problems
+            and deliver decisions, not just outputs.
           </p>
         </div>
 
