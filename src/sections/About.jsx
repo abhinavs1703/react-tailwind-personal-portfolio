@@ -3,26 +3,26 @@ import { Code2, Lightbulb, Rocket, Users } from "lucide-react";
 const highlights = [
   {
     icon: Code2,
-    title: "Clean Code",
+    title: "Analytical Precision",
     description:
-      "Building maintainable, scalable code designed for long term sustainability.",
+      "Building structured, data-driven pipelines and KPI frameworks engineered for accuracy and reliability.",
   },
   {
     icon: Rocket,
-    title: "Performance",
+    title: "Business Impact",
     description:
-      "Optimizing for speed and delivering fast user experiences.",
+      "Translating complex datasets into decisions — dashboards, reports, and insights that drive measurable outcomes.",
   },
   {
     icon: Users,
-    title: "Collaboration",
-    description: "Working closely with teams to bring ideas to life.",
+    title: "Stakeholder Communication",
+    description: "Bridging technical analysis and business context across cross-functional teams with clarity.",
   },
   {
     icon: Lightbulb,
-    title: "Innovation",
+    title: "Problem Solving",
     description:
-      "Staying ahead with the latest technologies and best practices.",
+      "Identifying patterns, gaps, and opportunities hidden within complex, high-volume operational data.",
   },
 ];
 
