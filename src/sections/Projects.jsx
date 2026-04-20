@@ -7,7 +7,7 @@ const projects = [
       "A product analytics simulation defining 6 success metrics, A/B testing framework, and high-fidelity Figma prototype validating real-time fare transparency across 5 user journey states.",
     image: "/projects/project1.png",
     tags: ["Product Analytics", "A/B Testing", "Figma", "SQL", "Python", "After Effects"],
-    link: "https://github.com/abhinavs1703",
+    link: "https://spruce-fade-73739059.figma.site/",
     github: "https://github.com/abhinavs1703",
   },
   {
