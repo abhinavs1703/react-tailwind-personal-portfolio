@@ -1,34 +1,22 @@
-import { ArrowDownRight, ArrowUpRight } from "lucide-react";
-import { profile } from "../data/portfolio";
+import { ArrowDownRight, ArrowUpRight } from 'lucide-react';
+import { profile } from '../data/portfolio';
 
-const disciplines = ["Software", "Applied AI", "Data systems", "Workflow design"];
-
-export const Hero = () => (
-  <section className="hero-section" aria-labelledby="hero-title">
-    <div className="hero-topline">
-      <span><span className="status-dot" /> Portfolio / Field notes</span>
-      <span>Independent practice <b>—</b> 2026</span>
+export const Hero = () => <section className="hero-section" aria-labelledby="hero-title">
+  <div className="hero-meta"><span><i className="hero-live-dot" />Portfolio / 2026</span><span>{profile.location}<b> · </b>Open to the right opportunity</span></div>
+  <div className="hero-layout">
+    <div className="hero-copy">
+      <p className="eyebrow"><span>01</span> A practical kind of curiosity</p>
+      <h1 id="hero-title">I make complex things <em>work better.</em></h1>
+      <p className="hero-description">I’m Abhinav Srivastava—a VIT graduate working across software, data, applied AI, and automation to turn messy inputs and repetitive work into useful systems.</p>
+      <div className="hero-actions"><a className="button-primary" href="#work">Explore my work <ArrowDownRight size={18} aria-hidden="true" /></a><a className="button-text" href={profile.linkedin} target="_blank" rel="noreferrer">Professional profile <ArrowUpRight size={16} aria-hidden="true" /></a></div>
+      <div className="hero-note"><span>FIELD NOTE / 001</span><p>Less busywork. Better signals. Systems people can actually use.</p></div>
     </div>
-    <div className="hero-grid">
-      <div className="hero-copy">
-        <p className="eyebrow">A practical approach to complicated work</p>
-        <h1 id="hero-title">I make complex work <em>work better.</em></h1>
-        <div className="hero-bottomline">
-          <p className="hero-intro">I’m {profile.name} — a VIT graduate working across software, data, applied AI, and automation. I turn messy inputs and repetitive steps into useful systems people can understand, run, and improve.</p>
-          <a className="text-link hero-link" href="#work"><span>Explore selected work</span><ArrowDownRight size={18} aria-hidden="true" /></a>
-        </div>
-      </div>
-      <div className="hero-art" aria-label="Portrait of Abhinav Srivastava">
-        <div className="portrait-index">AS / 001</div>
-        <img src="/profile-photo.jpg" alt="Abhinav Srivastava" fetchPriority="high" />
-        <div className="portrait-caption"><span>Curiosity, made practical.</span><span className="caption-rule" /><span>Gurugram, IN</span></div>
-        <div className="portrait-side-note" aria-hidden="true">BUILD / MEASURE / IMPROVE</div>
-      </div>
+    <div className="hero-art">
+      <div className="hero-art-ruler"><span>BUILD</span><span>MEASURE</span><span>IMPROVE</span></div>
+      <div className="hero-art-stage"><div className="orbit orbit-one"/><div className="orbit orbit-two"/><div className="orbit orbit-three"/><div className="hero-image-frame"><img src="/profile-photo.jpg" alt="Portrait of Abhinav Srivastava" fetchPriority="high" /></div><span className="art-sticker sticker-one">DATA<br/>→ SIGNAL</span><span className="art-sticker sticker-two">MAKE<br/>IT USEFUL</span><span className="art-cross cross-one">+</span><span className="art-cross cross-two">+</span></div>
+      <div className="hero-art-caption"><span>Curiosity, made practical.</span><span>AS / 001</span></div>
+      <div className="hero-art-side"><span>AUTOMATE</span><span>ANALYSE</span><span>BUILD</span><span>IMPROVE</span></div>
     </div>
-    <div className="discipline-rail" aria-label="Areas of work">
-      <span className="rail-label">Working across</span>
-      {disciplines.map((discipline, index) => <span className="discipline-item" key={discipline}><span className="discipline-number">0{index + 1}</span>{discipline}</span>)}
-      <a className="rail-outbound" href={profile.github} target="_blank" rel="noreferrer" aria-label="Open GitHub profile">GitHub <ArrowUpRight size={15} aria-hidden="true" /></a>
-    </div>
-  </section>
-);
+  </div>
+  <a className="scroll-cue" href="#work"><span>Follow the thread</span><span className="scroll-cue-line"/><ArrowDownRight size={16} aria-hidden="true" /></a>
+</section>;

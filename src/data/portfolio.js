@@ -1,100 +1,46 @@
-export const profile = {
-  name: "Abhinav Srivastava",
-  role: "Software · AI and machine learning · Analytics · Automation · Cloud",
-  location: "Gurugram, India",
-  email: "abhisritannu@gmail.com",
-  linkedin: "https://www.linkedin.com/in/abhinavsrivastava1703/",
-  github: "https://github.com/abhinavs1703",
-};
+export const profile = { name: 'Abhinav Srivastava', role: 'Software · Applied AI · Data · Automation', location: 'Gurugram, India', email: 'abhisritannu@gmail.com', linkedin: 'https://www.linkedin.com/in/abhinavsrivastava1703/', github: 'https://github.com/abhinavs1703' };
 
-export const capabilities = [
-  { number: "01", title: "Make data dependable", description: "Clean, validate, transform, and model data so analysis starts from something trustworthy—not a spreadsheet full of assumptions.", tools: "Python · SQL · Pandas · NumPy · Power Query" },
-  { number: "02", title: "Turn analysis into decisions", description: "Build KPI definitions, anomaly checks, and reporting views that help people understand what changed and where to investigate next.", tools: "CTEs · Window functions · DAX · Power BI · Excel" },
-  { number: "03", title: "Connect the repetitive steps", description: "Link data, files, AI-assisted drafting, reporting, and delivery into workflows that are easier to run, audit, and maintain.", tools: "Python · APIs · Make.com · Puppeteer · GitHub Actions" },
-  { number: "04", title: "Put models to practical use", description: "Build and evaluate machine-learning workflows, then connect the selected model to a usable application or deployment path.", tools: "Scikit-learn · LightGBM · NLP · AWS SageMaker · OpenCV" }
+export const proof = [
+  { value: '10K+', label: 'industrial telemetry records transformed' },
+  { value: '60%', label: 'less manual data preparation' },
+  { value: '₹25L', label: 'institutional research grant' },
+  { value: '12+', label: 'operational KPIs defined' }
 ];
 
 export const projects = [
-  {
-    id: "kpi-monitoring", number: "01", title: "Operational KPI Monitoring & Anomaly Detection", category: "Data & BI", year: "2025",
-    summary: "A repeatable monitoring workflow for industrial time-series data, designed to make operational changes easier to detect and investigate.",
-    challenge: "Operational records need more than a dashboard. Data must be prepared consistently, metrics must be comparable, and unusual values need to be visible to the people reviewing performance.",
-    approach: "Built SQL transformations with CTEs, joins, aggregations, window functions, and LAG/LEAD. Applied Z-score and IQR methods to flag unusual values, then presented results in a five-page Power BI dashboard.",
-    outcomes: [{ value: "10K+", label: "daily time-series records" }, { value: "6", label: "operational dimensions" }, { value: "12+", label: "defined KPIs" }, { value: "35%", label: "less manual monitoring effort" }],
-    stack: ["SQL", "Python", "Pandas", "NumPy", "Power BI", "DAX"], image: "/projects/project2.png", imageAlt: "Project visual for operational KPI monitoring", visualType: "image", link: null, linkLabel: null
-  },
-  {
-    id: "executive-reporting", number: "02", title: "Automated Executive PDF Reporting System", category: "Automation", year: "2026",
-    summary: "A reporting pipeline that takes weekly SQL metrics through charting and template rendering to a generated PDF delivered by email.",
-    challenge: "Recurring reports can involve manual hand-offs between metric extraction, formatting, chart creation, PDF export, and distribution.",
-    approach: "Aggregated metrics with SQL, passed results as JSON into Handlebars templates, rendered Chart.js visualisations, used Puppeteer to generate a PDF, and attached it to a SendGrid email. Each stage stayed separate for easier debugging and extension.",
-    outcomes: [{ value: "SQL", label: "metric aggregation" }, { value: "HTML", label: "templated report" }, { value: "PDF", label: "automated output" }, { value: "Email", label: "delivery stage" }],
-    stack: ["SQL", "JavaScript", "Handlebars", "Chart.js", "Puppeteer", "SendGrid"], visualType: "pipeline", flow: ["SQL metrics", "JSON", "HTML + charts", "PDF", "Email"], link: "https://github.com/abhinavs1703/Automated-Executive-PDF-Reporting-System", linkLabel: "Open repository"
-  },
-  {
-    id: "car-sales", number: "03", title: "Automotive Car Sales Analytics Platform", category: "Data & BI", year: "2024",
-    summary: "A business-intelligence workflow for exploring automotive sales across regions, tracking performance, and reducing recurring reporting effort.",
-    challenge: "Sales reporting needs a stable data model and clearly defined measures before year-on-year growth, market share, and sales movement can be compared.",
-    approach: "Prepared datasets from automotive sales records using SQL joins and aggregations, Power Query transformations, and data modelling. Created DAX measures for year-on-year growth, market share, sales velocity, and forecast deviation.",
-    outcomes: [{ value: "50K+", label: "sales records" }, { value: "12", label: "regional markets" }, { value: "15+", label: "DAX measures" }, { value: "40%", label: "less manual reporting effort" }],
-    stack: ["SQL", "Power Query", "Power BI", "DAX", "Data modelling"], image: "/projects/project3.png", imageAlt: "Project visual for automotive sales analytics", visualType: "image", link: "https://github.com/abhinavs1703/car-sales-dashboard-powerbi", linkLabel: "Open repository"
-  },
-  {
-    id: "recruitment-automation", number: "04", title: "AI-Assisted Recruitment Outreach Automation", category: "Automation", year: "2026",
-    summary: "A connected workflow for matching lead records to stored résumés, drafting tailored outreach, sending messages, and recording status.",
-    challenge: "Personalised outreach involves switching between lead sheets, stored files, message drafting, email delivery, and status tracking.",
-    approach: "Connected Google Sheets lead records with matching résumés in Google Drive, sent relevant context to Grok for a draft, delivered messages through the connected email account, and wrote the send status back to the source lead row.",
-    outcomes: [{ value: "01", label: "lead intake" }, { value: "02", label: "résumé retrieval" }, { value: "03", label: "AI-assisted draft" }, { value: "04", label: "send + status" }],
-    stack: ["Make.com", "Grok", "Google Sheets", "Google Drive", "Email automation"], visualType: "pipeline", flow: ["Lead row", "Résumé match", "Draft", "Send", "Status update"], link: null, linkLabel: null
-  },
-  {
-    id: "cicd-pipeline", number: "05", title: "CI/CD Testing & Deployment Pipeline", category: "Engineering", year: "2026",
-    summary: "A gated release process that stops on test failure and proceeds to image publishing and server restart only after checks pass.",
-    challenge: "A deployment workflow should not ship an image or restart a service when its preceding validation stage has failed.",
-    approach: "Automated checkout, dependency installation, and tests with GitHub Actions. On success, the workflow authenticates to a Docker registry, builds and pushes an image, and sends a webhook to restart the server. Failure handling and team notification were included.",
-    outcomes: [{ value: "Test", label: "before release" }, { value: "Build", label: "Docker image" }, { value: "Push", label: "registry" }, { value: "Deploy", label: "webhook restart" }],
-    stack: ["GitHub Actions", "Docker", "Git", "Webhooks", "CI/CD"], visualType: "pipeline", flow: ["Checkout", "Install + test", "Build image", "Push image", "Deploy hook"], link: "https://github.com/abhinavs1703/ci-cd-testing-deployment-pipeline", linkLabel: "Open repository"
-  },
-  {
-    id: "crop-recommendation", number: "06", title: "Crop Recommendation System", category: "AI & ML", year: "2024",
-    summary: "A machine-learning workflow comparing classification models and serving crop recommendations from soil and environmental inputs.",
-    challenge: "The workflow needs to compare candidate models against the same features and provide a practical path from measurements to a recommendation.",
-    approach: "Compared Random Forest and LightGBM using nitrogen, phosphorus, potassium, pH, temperature, and moisture inputs. Connected the selected model to a web prediction workflow and deployed the ML system using AWS SageMaker, EC2, and S3.",
-    outcomes: [{ value: "2", label: "models compared" }, { value: "6", label: "input features" }, { value: "AWS", label: "deployment services" }],
-    stack: ["Python", "Random Forest", "LightGBM", "SageMaker", "EC2", "S3"], image: "/projects/project4.png", imageAlt: "Project visual for the crop recommendation system", visualType: "image", link: null, linkLabel: null
-  },
-  {
-    id: "disaster-response", number: "07", title: "Disaster Response & Edge Computer Vision", category: "AI & ML", year: "2024–25",
-    summary: "A coordinated response concept combining live operational status with on-device object detection for a disaster-management workflow.",
-    challenge: "A response cycle has dependent stages: detection, dispatch, live updates, workforce coordination, extraction confirmation, and base acknowledgement.",
-    approach: "Used React, Mapbox, Supabase Realtime, and Python to coordinate status between stages. Developed the computer-vision component using YOLOv8 and OpenCV, with edge inference on NVIDIA Jetson Xavier NX and visual, thermal, and LiDAR inputs.",
-    outcomes: [{ value: "₹25L", label: "VIT institutional research grant" }, { value: "93.5%", label: "reported precision" }, { value: "94.2%", label: "reported recall" }, { value: "<50 ms", label: "reported inference time" }],
-    stack: ["React", "Python", "Supabase Realtime", "YOLOv8", "OpenCV", "Jetson Xavier NX"], visualType: "pipeline", flow: ["Detect", "Dispatch", "Live status", "Coordinate", "Confirm"], link: null, linkLabel: null
-  },
-  {
-    id: "fare-tracker", number: "08", title: "Live Fare Tracker — Product Concept", category: "Product", year: "2026",
-    summary: "An interface concept that makes a ride price easier to understand by showing how the fare is composed, not just the final total.",
-    challenge: "When a ride fare changes, a single total can leave people unclear about how distance, time, waiting, tolls, and surge conditions contributed.",
-    approach: "Designed 12+ high-fidelity Android screens and an approximately 90-second After Effects demonstration to show fare components in the user journey and explain price changes in context.",
-    outcomes: [{ value: "12+", label: "high-fidelity screens" }, { value: "~90 sec", label: "motion demonstration" }, { value: "5", label: "fare components explored" }],
-    stack: ["Product requirements", "Figma", "Android UI", "After Effects"], image: "/projects/project1.png", imageAlt: "Visual from the live fare tracker concept", visualType: "image", link: "https://spruce-fade-73739059.figma.site/", linkLabel: "Explore prototype"
-  }
+  { id:'kpi-monitoring', number:'01', featured:true, title:'Operational KPI Monitoring', category:'Data & BI', year:'2025', intro:'Turning industrial time-series data into signals an engineering team can act on.', challenge:'Operational records need consistent preparation, comparable metrics, and a practical way to surface unusual behaviour for investigation.', approach:'Built Python and SQL ETL workflows, calculated 12+ KPIs with joins, CTEs, aggregations, window functions and LAG/LEAD, and applied Z-score and IQR methods to flag anomalies. A five-page Power BI dashboard brought the workflow into operational review.', results:[['10K+','daily time-series records'],['6','operational dimensions'],['12+','tracked KPIs'],['35%','less manual monitoring effort']], stack:['Python','SQL','Pandas','NumPy','Power BI','DAX'], visual:'/projects/art/kpi-monitoring.svg', alt:'Custom analytics illustration with KPI indicators, performance chart, and anomaly queue', link:null, linkLabel:null },
+  { id:'executive-reporting', number:'02', title:'Executive PDF Reporting System', category:'Automation', year:'2026', intro:'From SQL metrics to a charted PDF, delivered without rebuilding the report by hand.', challenge:'Recurring business reporting can split metric extraction, formatting, chart creation, export, and distribution into separate manual steps.', approach:'Aggregated weekly metrics with SQL, passed JSON into Handlebars templates, generated Chart.js charts, rendered PDFs with Puppeteer, and attached reports to a SendGrid email. Each stage stays separate for easier debugging.', results:[['SQL','metric source'],['HTML','templated report'],['PDF','automated output'],['Email','delivery stage']], stack:['SQL','JavaScript','Handlebars','Chart.js','Puppeteer','SendGrid'], visual:'/projects/art/executive-reporting.svg', alt:'Purpose-made visual of a business report, data chart, and automated delivery path', link:'https://github.com/abhinavs1703/Automated-Executive-PDF-Reporting-System', linkLabel:'Explore repository' },
+  { id:'car-sales', number:'03', title:'Automotive Sales Intelligence', category:'Data & BI', year:'2024', intro:'A cleaner view of sales movement across regions, markets, and reporting periods.', challenge:'Questions about growth, market share, and sales velocity need stable models and well-defined measures.', approach:'Prepared 50,000+ sales records with SQL and Power Query, modelled the reporting data, and created DAX measures for year-over-year growth, market share, sales velocity, and forecast deviation.', results:[['50K+','sales records'],['12','regional markets'],['15+','DAX measures'],['40%','less manual reporting effort']], stack:['SQL','Power Query','Power BI','DAX','Data modelling'], visual:'/projects/art/car-sales.svg', alt:'Custom automotive analytics illustration with a vehicle silhouette and regional sales chart', link:'https://github.com/abhinavs1703/car-sales-dashboard-powerbi', linkLabel:'Explore repository' },
+  { id:'recruitment-automation', number:'04', title:'AI-Assisted Outreach Workflow', category:'Automation', year:'2026', intro:'Lead intake, résumé matching, message drafting, delivery, and status tracking in one connected path.', challenge:'Personalised outreach means repeatedly switching between lead records, stored files, drafting, email delivery, and tracking.', approach:'Connected Google Sheets lead records with matching résumés in Drive, sent context to Grok to draft tailored outreach, delivered messages through the connected email account, and wrote send status back to each source row.', results:[['01','lead intake'],['02','résumé match'],['03','AI-assisted draft'],['04','send + tracking']], stack:['Make.com','Grok','Google Sheets','Google Drive','Email automation'], visual:'/projects/art/recruitment-flow.svg', alt:'Custom workflow illustration connecting lead sheets, file matching, AI drafting, email, and status', link:null, linkLabel:null },
+  { id:'cicd-pipeline', number:'05', title:'CI/CD Testing & Deployment', category:'Engineering', year:'2026', intro:'A release pipeline that only moves forward when the preceding checks succeed.', challenge:'Deployment should stop when validation fails, instead of publishing a broken image or restarting a service.', approach:'Automated checkout, dependency installation, and tests with GitHub Actions. On success, the workflow authenticates to a Docker registry, builds and pushes an image, and triggers a server restart through a webhook.', results:[['Test','before release'],['Build','container image'],['Push','registry'],['Deploy','webhook trigger']], stack:['GitHub Actions','Docker','Git','Webhooks','CI/CD'], visual:'/projects/art/cicd-pipeline.svg', alt:'Custom release pipeline diagram with verification steps, release gate, container build, and deployment', link:'https://github.com/abhinavs1703/ci-cd-testing-deployment-pipeline', linkLabel:'Explore repository' },
+  { id:'crop-model', number:'06', title:'Crop Recommendation Model', category:'AI & ML', year:'2024', intro:'A practical route from soil and environment readings to a model-backed recommendation.', challenge:'A useful prediction workflow compares models and connects measurements to an accessible inference path.', approach:'Compared Random Forest and LightGBM using nitrogen, phosphorus, potassium, pH, temperature, and moisture features, then connected the selected model to a web prediction workflow deployed with AWS SageMaker, EC2, and S3.', results:[['2','models compared'],['6','input features'],['AWS','deployment services']], stack:['Python','Random Forest','LightGBM','SageMaker','EC2','S3'], visual:'/projects/art/crop-model.svg', alt:'Purpose-made crop modelling illustration with botanical shapes and model feature signals', link:null, linkLabel:null },
+  { id:'disaster-response', number:'07', title:'Disaster Response & Edge Vision', category:'AI & ML', year:'2024–25', intro:'Connecting response coordination with an edge-computer-vision component.', challenge:'A response cycle depends on connected stages: detection, dispatch, live updates, workforce coordination, extraction confirmation, and acknowledgement.', approach:'Built a coordinated dashboard concept with React, Mapbox, Supabase Realtime, and Python. Developed the detection component with YOLOv8 and OpenCV, running edge inference on NVIDIA Jetson Xavier NX with visual, thermal, and LiDAR inputs.', results:[['₹25L','institutional research grant'],['93.5%','reported precision'],['94.2%','reported recall'],['<50 ms','reported inference time']], stack:['React','Python','Supabase Realtime','YOLOv8','OpenCV','Jetson Xavier NX'], visual:'/projects/art/disaster-response.svg', alt:'Custom visual of a disaster response map, detection target, telemetry route, and drone', link:null, linkLabel:null },
+  { id:'fare-tracker', number:'08', title:'Live Fare Tracker Concept', category:'Product', year:'2026', intro:'Explaining the components behind a ride price instead of showing only the final total.', challenge:'A single total can leave people unsure how distance, time, waiting, tolls, and surge conditions changed the price.', approach:'Created 12+ high-fidelity Android screens and an approximately 90-second After Effects demonstration to show fare components in context.', results:[['12+','high-fidelity screens'],['~90 sec','motion demonstration'],['5','fare components explored']], stack:['Product requirements','Figma','Android UI','After Effects'], visual:'/projects/art/fare-tracker.svg', alt:'Custom fare tracker product concept showing a mobile price breakdown and five component bars', link:'https://spruce-fade-73739059.figma.site/', linkLabel:'Explore prototype' }
+];
+
+export const capabilities = [
+  { number:'01', title:'Make data dependable', text:'Prepare, validate, and transform messy inputs so analysis starts from something trustworthy.', tools:'Python · SQL · Pandas · NumPy' },
+  { number:'02', title:'Make change visible', text:'Define KPIs, inspect unusual values, and build reporting that shows a team where to look next.', tools:'CTEs · Window functions · Power BI · DAX' },
+  { number:'03', title:'Connect repeated steps', text:'Join files, APIs, AI-assisted drafting, reporting, and delivery into workflows people can run and maintain.', tools:'Make.com · APIs · Puppeteer · GitHub Actions' },
+  { number:'04', title:'Put models to work', text:'Evaluate ML approaches and build a practical path from features and inference to a usable application.', tools:'Scikit-learn · LightGBM · NLP · AWS · OpenCV' }
 ];
 
 export const experience = {
-  role: "Engineering Intern", company: "Tata Cummins Ltd.", location: "Jamshedpur, Jharkhand, India", year: "2025",
-  description: "Worked with industrial IoT telemetry and operational reporting, from reliable data preparation to anomaly investigation and communication of findings.",
-  contributions: [
-    "Built Python and SQL ETL workflows to clean, validate, and transform 10,000+ telemetry records, reducing manual data-preparation effort by 60%.",
-    "Used SQL joins, aggregations, and window functions, with data-quality checks across six operational dimensions.",
-    "Applied threshold- and pattern-based anomaly detection to flag unusual telemetry behaviour for investigation.",
-    "Automated recurring KPI reports and communicated findings to engineering and management stakeholders."
+  role:'Engineering Intern', company:'Tata Cummins Ltd.', location:'Jamshedpur, Jharkhand, India', year:'2025',
+  summary:'Worked with industrial IoT telemetry and operational reporting, from reliable data preparation to anomaly investigation and communicating findings.',
+  contributions:[
+    'Built Python and SQL ETL workflows to clean, validate, and transform 10,000+ telemetry records, reducing manual data-preparation effort by 60%.',
+    'Used SQL joins, aggregations, and window functions, with data-quality checks across six operational dimensions.',
+    'Applied threshold- and pattern-based anomaly detection to flag unusual telemetry behaviour for investigation.',
+    'Automated recurring KPI reports and communicated findings to engineering and management stakeholders.'
   ]
 };
 
-export const education = {
-  institution: "Vellore Institute of Technology",
-  degree: "B.Tech, Electrical and Electronics Engineering",
-  period: "September 2022 – June 2026",
-  result: "CGPA 8.0 / 10.0"
-};
+export const recognition = [
+  { year:'2025', title:'Winner — Innovation Week', detail:'VIT flagship technology competition' },
+  { year:'2025', title:'Winner — ETL Design for AI-Powered Multi-Agent Systems', detail:'VIT Expo' },
+  { year:'2025', title:'Runner-up — Yantra Inquizitorius', detail:'Technical quiz among 200+ participants' },
+  { year:'2024', title:'Project Lead — Team Cipher Drone Initiative', detail:'March–October 2024' }
+];
+
+export const education = { institution:'Vellore Institute of Technology', degree:'B.Tech, Electrical and Electronics Engineering', period:'September 2022 – June 2026', result:'CGPA 8.0 / 10.0' };
