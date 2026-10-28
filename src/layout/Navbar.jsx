@@ -1,92 +1,18 @@
-import { Button } from "@/components/Button";
-import { Menu, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
+import { ArrowUpRight, Menu, X } from 'lucide-react';
+import { profile } from '../data/portfolio';
 
-const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
-  { href: "#experience", label: "Experience" },
-  { href: "#testimonials", label: "Testimonials" },
-];
-
+const links = [{href:'#work',label:'Work'},{href:'#method',label:'How I work'},{href:'#journey',label:'The path'}];
 export const Navbar = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  return (
-    <header
-      className={`fixed top-0 left-0 right-0 transition-all duration-500 ${
-        isScrolled ? "glass-strong py-3" : "bg-transparent py-5"
-      }  z-50`}
-    >
-      <nav className="container mx-auto px-6 flex items-center justify-between">
-        <a
-          href="#"
-          className="text-xl font-bold tracking-tight hover:text-primary"
-        >
-          AS<span className="text-primary">.</span>
-        </a>
-
-        {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-1">
-          <div className="glass rounded-full px-2 py-1 flex items-center gap-1">
-            {navLinks.map((link, index) => (
-              <a
-                href={link.href}
-                key={index}
-                className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full hover:bg-surface"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
-        </div>
-
-        {/* CTA Button */}
-        <div className="hidden md:block">
-          <Button size="sm">Contact Me</Button>
-        </div>
-
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden p-2 text-foreground cursor-pointer"
-          onClick={() => setIsMobileMenuOpen((prev) => !prev)}
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </nav>
-
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden glass-strong animate-fade-in">
-          <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
-            {navLinks.map((link, index) => (
-              <a
-                href={link.href}
-                key={index}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-lg text-muted-foreground hover:text-foreground py-2"
-              >
-                {link.label}
-              </a>
-            ))}
-
-            <Button onClick={() => setIsMobileMenuOpen(false)}>
-              Contact Me
-            </Button>
-          </div>
-        </div>
-      )}
-    </header>
-  );
+ const [open,setOpen]=useState(false);
+ const [scrolled,setScrolled]=useState(false);
+ useEffect(()=>{const onScroll=()=>setScrolled(window.scrollY>24);window.addEventListener('scroll',onScroll,{passive:true});return()=>window.removeEventListener('scroll',onScroll);},[]);
+ useEffect(()=>{if(!open)return undefined;const onKeyDown=e=>{if(e.key==='Escape')setOpen(false)};window.addEventListener('keydown',onKeyDown);return()=>window.removeEventListener('keydown',onKeyDown);},[open]);
+ const close=()=>setOpen(false);
+ return <header className={'site-header'+(scrolled?' is-scrolled':'')}><nav className="nav-inner" aria-label="Main navigation">
+  <a className="brand-lockup" href="#top" onClick={close} aria-label="Abhinav Srivastava, home"><span className="brand-monogram">A<span>S</span><i>.</i></span><span className="brand-wording">Systems in motion<span>Software · Data · Automation</span></span></a>
+  <div className="desktop-links">{links.map((link,index)=><a key={link.href} href={link.href}><span>0{index+1}</span>{link.label}</a>)}</div>
+  <a className="nav-cta" href="#contact">Let’s talk <ArrowUpRight size={16} aria-hidden="true"/></a>
+  <button className="menu-toggle" type="button" aria-label={open?'Close navigation':'Open navigation'} aria-expanded={open} aria-controls="mobile-links" onClick={()=>setOpen(v=>!v)}>{open?<X size={21}/>:<Menu size={21}/>}</button>
+ </nav><div id="mobile-links" className={'mobile-links'+(open?' is-open':'')} hidden={!open}>{links.map((link,index)=><a key={link.href} href={link.href} onClick={close}><span>0{index+1}</span>{link.label}<ArrowUpRight size={16}/></a>)}<a href={profile.linkedin} target="_blank" rel="noreferrer" onClick={close}><span>↗</span>LinkedIn<ArrowUpRight size={16}/></a></div></header>;
 };
