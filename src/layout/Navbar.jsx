@@ -1,92 +1,55 @@
-import { Button } from "@/components/Button";
-import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { ArrowUpRight, Menu, X } from "lucide-react";
+import { profile } from "../data/portfolio";
 
-const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
-  { href: "#experience", label: "Experience" },
-  { href: "#testimonials", label: "Testimonials" },
+const navigation = [
+  { href: "#work", label: "Selected work" },
+  { href: "#approach", label: "Approach" },
+  { href: "#path", label: "Path" }
 ];
 
 export const Navbar = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [compact, setCompact] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
+    const onScroll = () => setCompact(window.scrollY > 36);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    if (!menuOpen) return undefined;
+    const onKeyDown = (event) => {
+      if (event.key === "Escape") setMenuOpen(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [menuOpen]);
+
+  const closeMenu = () => setMenuOpen(false);
+
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 transition-all duration-500 ${
-        isScrolled ? "glass-strong py-3" : "bg-transparent py-5"
-      }  z-50`}
-    >
-      <nav className="container mx-auto px-6 flex items-center justify-between">
-        <a
-          href="#"
-          className="text-xl font-bold tracking-tight hover:text-primary"
-        >
-          AS<span className="text-primary">.</span>
+    <header className={"site-header" + (compact ? " is-compact" : "")}>
+      <nav className="nav-inner" aria-label="Main navigation">
+        <a className="wordmark" href="#top" onClick={closeMenu} aria-label="Abhinav Srivastava, home">
+          <span className="wordmark-mark">AS<span>.</span></span>
+          <span className="wordmark-caption">Systems / data / automation</span>
         </a>
-
-        {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-1">
-          <div className="glass rounded-full px-2 py-1 flex items-center gap-1">
-            {navLinks.map((link, index) => (
-              <a
-                href={link.href}
-                key={index}
-                className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full hover:bg-surface"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
+        <div className="desktop-navigation">
+          {navigation.map((item) => <a key={item.href} href={item.href}>{item.label}</a>)}
         </div>
-
-        {/* CTA Button */}
-        <div className="hidden md:block">
-          <Button size="sm">Contact Me</Button>
-        </div>
-
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden p-2 text-foreground cursor-pointer"
-          onClick={() => setIsMobileMenuOpen((prev) => !prev)}
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        <a className="nav-contact" href="#contact"><span>Start a conversation</span><ArrowUpRight size={16} aria-hidden="true" /></a>
+        <button className="menu-toggle" type="button" aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"} aria-expanded={menuOpen} aria-controls="mobile-navigation" onClick={() => setMenuOpen((current) => !current)}>
+          {menuOpen ? <X size={21} aria-hidden="true" /> : <Menu size={21} aria-hidden="true" />}
         </button>
       </nav>
-
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden glass-strong animate-fade-in">
-          <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
-            {navLinks.map((link, index) => (
-              <a
-                href={link.href}
-                key={index}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-lg text-muted-foreground hover:text-foreground py-2"
-              >
-                {link.label}
-              </a>
-            ))}
-
-            <Button onClick={() => setIsMobileMenuOpen(false)}>
-              Contact Me
-            </Button>
-          </div>
-        </div>
-      )}
+      <div id="mobile-navigation" className={"mobile-navigation" + (menuOpen ? " is-open" : "")} hidden={!menuOpen}>
+        {navigation.map((item, index) => (
+          <a key={item.href} href={item.href} onClick={closeMenu}><span className="mobile-link-index">0{index + 1}</span>{item.label}<ArrowUpRight size={17} aria-hidden="true" /></a>
+        ))}
+        <a href={profile.linkedin} target="_blank" rel="noreferrer" onClick={closeMenu}><span className="mobile-link-index">↗</span>LinkedIn<ArrowUpRight size={17} aria-hidden="true" /></a>
+      </div>
     </header>
   );
 };
